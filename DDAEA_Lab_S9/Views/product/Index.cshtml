@@ -1,0 +1,40 @@
+﻿@model IEnumerable<DDAEA_Lab_S9.Models.productos>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreProducto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idProveedor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idCategoria)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombreProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idProveedor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idCategoria)
+            </td>
+        </tr>
+    }
+
+</table>
+
